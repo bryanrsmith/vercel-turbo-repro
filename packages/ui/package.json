@@ -1,0 +1,23 @@
+{
+  "name": "@99spokes/ui",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "module": "index.js",
+  "sideEffects": false,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "jest --passWithNoTests"
+  },
+  "dependencies": {
+    "@floating-ui/react-dom-interactions": "^0.12.0",
+    "@styled-system/css": "^5.1.5",
+    "react-merge-refs": "^1",
+    "styled-system": "^5.1.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "styled-components": "^5.2.1"
+  }
+}

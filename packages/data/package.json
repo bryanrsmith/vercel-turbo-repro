@@ -1,0 +1,20 @@
+{
+  "name": "@99spokes/data",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "jest --passWithNoTests",
+    "db:generate": "prisma generate --data-proxy"
+  },
+  "dependencies": {
+    "@99spokes/util": "*",
+    "@prisma/client": "^4.7.1",
+    "object-path": "^0.11.8"
+  },
+  "devDependencies": {
+    "prisma": "^4.7.1"
+  }
+}

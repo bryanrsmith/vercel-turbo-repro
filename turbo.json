@@ -1,0 +1,37 @@
+{
+	"$schema": "https://turborepo.org/schema.json",
+	"pipeline": {
+		"build": {
+			"dependsOn": ["^build", "^db:generate"],
+			"outputs": [".next/**", "dist/**"]
+		},
+		"@99spokes/web#build": {
+			"dependsOn": ["^build", "^db:generate"],
+			"outputs": [".next/**", "dist/**"],
+			"env": [
+				"ELASTIC_INDEX",
+				"ELASTIC_PRODUCTS_INDEX",
+				"ELASTIC_ENDPOINT",
+				"ELASTIC_AUTH_TOKEN",
+				"NEXTAUTH_SECRET",
+				"NEXTAUTH_GOOGLE_CLIENT_ID",
+				"NEXTAUTH_GOOGLE_CLIENT_SECRET",
+				"ANALYZE"
+			]
+		},
+		"db:generate": {
+			"cache": false
+		},
+		"lint": {
+			"outputs": []
+		},
+		"test": {
+			"outputs": []
+		},
+		"dev": {
+			"dependsOn": ["^db:generate"],
+			"cache": false,
+			"persistent": true
+		}
+	}
+}

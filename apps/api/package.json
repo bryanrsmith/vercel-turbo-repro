@@ -1,0 +1,31 @@
+{
+  "name": "@99spokes/api",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "dev": "fastify start -r esbuild-register src/app.js --port 3000 --options --watch --log-level=info --pretty-logs",
+    "lint": "eslint ./",
+    "test": "jest --silent"
+  },
+  "dependencies": {
+    "@99spokes/data": "*",
+    "@99spokes/util": "*",
+    "@fastify/ajv-compiler": "^3.1.2",
+    "@fastify/cors": "^8.1.0",
+    "@fastify/jwt": "^6.3.2",
+    "@fastify/sensible": "^5.1.0",
+    "@fastify/swagger": "^7.4.1",
+    "ajv-formats": "^2.1.1",
+    "fastify": "^4.4.0",
+    "fastify-plugin": "^4.2.1",
+    "rollbar": "^2.25.0",
+    "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "fastify-cli": "^5.1.0"
+  }
+}

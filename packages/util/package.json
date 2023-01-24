@@ -1,0 +1,17 @@
+{
+  "name": "@99spokes/util",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "jest"
+  },
+  "dependencies": {
+    "core-js": "^3.26.1",
+    "lodash.isequal": "^4.5.0"
+  }
+}
